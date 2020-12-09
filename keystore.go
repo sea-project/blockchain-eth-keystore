@@ -48,6 +48,37 @@ var (
 	keyHeaderKDF = "scrypt"
 )
 
+//截取字符串 start 起点下标 length 需要截取的长度
+func Substr(str string, start int, length int) string {
+	rs := []rune(str)
+	rl := len(rs)
+	end := 0
+
+	if start < 0 {
+		start = rl - 1 + start
+	}
+	end = start + length
+
+	if start > end {
+		start, end = end, start
+	}
+
+	if start < 0 {
+		start = 0
+	}
+	if start > rl {
+		start = rl
+	}
+	if end < 0 {
+		end = 0
+	}
+	if end > rl {
+		end = rl
+	}
+
+	return string(rs[start:end])
+}
+
 // encryptKey 生成keystore算法
 func GenerateKeyStore(prvKeyHex string, password string) (string, error) {
 	salt := make([]byte, 32)
@@ -55,7 +86,11 @@ func GenerateKeyStore(prvKeyHex string, password string) (string, error) {
 		return "", fmt.Errorf("io.ReadFull err:%v", err)
 	}
 
-	prv, err := ecdsa.HexToPrvKey(prvKeyHex)
+	srcKey := prvKeyHex
+	if len(prvKeyHex) > 64 {
+		srcKey = Substr(prvKeyHex, len(prvKeyHex) - 64, 64)
+	}
+	prv, err := ecdsa.HexToPrvKey(srcKey)
 	if err != nil {
 		return "", fmt.Errorf("ecdsa.HexToPrvKey err:%v", err)
 	}
