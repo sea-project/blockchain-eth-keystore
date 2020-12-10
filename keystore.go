@@ -94,7 +94,8 @@ func GenerateKeyStore(prvKeyHex string, password string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("ecdsa.HexToPrvKey err:%v", err)
 	}
-	address := prv.ToPubKey().ToAddress()
+	addrHex := prv.ToPubKey().ToAddress().Hex()
+	address := Substr(addrHex, len(addrHex)-ecdsa.ETHAddressLength * 2, ecdsa.ETHAddressLength * 2)
 
 	derivedKey, err := scrypt.Key([]byte(password), salt, scryptN, scryptR, scryptP, scryptDKLen)
 	if err != nil {
@@ -137,7 +138,7 @@ func GenerateKeyStore(prvKeyHex string, password string) (string, error) {
 	randomId, _ := uuid.NewUUID()
 	keyJson := &KeyJSON{
 		ID:           randomId.String(),
-		Address:      address.Hex(),
+		Address:      address,
 		Version:      version,
 		ScryptParams: scryptParams,
 	}
