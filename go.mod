@@ -1,4 +1,4 @@
-module github.com/sea-project/crypto-prikey-keystore
+module github.com/sea-project/blockchain-eth-keystore
 
 go 1.14
 
