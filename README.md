@@ -1,2 +1,2 @@
-# crypto-prikey-keystore
-私钥和keystore互相转换
+# blockchain-eth-keystore
+ETH规则私钥和keystore互相转换
