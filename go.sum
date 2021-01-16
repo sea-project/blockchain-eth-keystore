@@ -12,8 +12,6 @@ github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742 h1:Esafd1046DLD
 github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod h1:bx2lNnkwVCuqBIxFjflWJWanXIb3RllmbCylyMrvgv0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/sea-project/crypto-aes v0.0.0-20201209115807-6f70fdda56ab h1:M5xIwZ8ugqVINv2ICBKaYzL3Uo4r2SbHxW6XQynhmmI=
-github.com/sea-project/crypto-aes v0.0.0-20201209115807-6f70fdda56ab/go.mod h1:Iufx0rU0SVy4d7D4w+AOLYXgEGuDGjjJMqiaTflHNaY=
 github.com/sea-project/crypto-codec-base58 v0.0.0-20201116150651-9220e4cb699a h1:sfkwUCpGD/cl1SG0MMDVOauK9aYNSskWbQcfca5axMk=
 github.com/sea-project/crypto-codec-base58 v0.0.0-20201116150651-9220e4cb699a/go.mod h1:UJuVqi45vt28rIUjLzMVpxYGuKkWFKZzEUXI3wgiy2M=
 github.com/sea-project/crypto-codec-rlp v0.0.0-20201125020933-b552b25a9c03 h1:GqwjAGJ1YiA6hlvdYXBf7hl2qtqXC6smVjavXE2DHyo=
@@ -23,6 +21,8 @@ github.com/sea-project/crypto-ecc-s256 v0.0.0-20201112115545-6e26b604f2b7/go.mod
 github.com/sea-project/crypto-hash-sha3 v0.0.0-20201112103137-a804ec4a033e/go.mod h1:/ubKLhe2yPZ3EetQEGoxYGjREz8ZlHOXTqL3CZq/r8M=
 github.com/sea-project/crypto-hash-sha3 v0.0.0-20201208102136-829578ade00a h1:pTiDPs0SqpVN1KCoRQsbjp6rv37MAo70PcFb2goxbJ4=
 github.com/sea-project/crypto-hash-sha3 v0.0.0-20201208102136-829578ade00a/go.mod h1:/ubKLhe2yPZ3EetQEGoxYGjREz8ZlHOXTqL3CZq/r8M=
+github.com/sea-project/crypto-sea-aes v0.0.0-20201211023822-08e1e8b76e9d h1:jVOzwJiJrESUNRmsVpHEpW15JybKwwRw4LOBB3pkn8s=
+github.com/sea-project/crypto-sea-aes v0.0.0-20201211023822-08e1e8b76e9d/go.mod h1:yZnNPLIsnWnW/vvof+4H+JZO95ODdKzZx0eNnuziCko=
 github.com/sea-project/crypto-signature-ecdsa v0.0.0-20201209125217-06de0241fa93 h1:4NLxmisTGZKyX70VieiYiCg8cp4v9wuUMl9PcdnWAqg=
 github.com/sea-project/crypto-signature-ecdsa v0.0.0-20201209125217-06de0241fa93/go.mod h1:44sp5Ta0XacD8O2pXFHPYtP1ADw2AQW7scYAZn46k3U=
 github.com/sea-project/stdlib-bytes v0.0.0-20201112140324-eb835f449f02 h1:iEDLbldVabfhc7KtFuLwPBsnmfhKGqQQleKPkWmltpM=
